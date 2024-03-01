@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Reorder and test pre-commit hooks with Laravel Pint command
+Route::middleware('auth:sanctum')
+    ->get('/user',
+        function (Request $request) {
+            return $request->user();
+        }
+    );
